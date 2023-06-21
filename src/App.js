@@ -1,10 +1,19 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css';
+import Home from './components/Home';
+import Profile from './components/Profile';
+
+
 
 function App() {
   return (
-    <div >
-     <p> i am prashant</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='userDetails' element={<Profile/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
